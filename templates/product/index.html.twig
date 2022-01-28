@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h1>Productos</h1>
+
+        Listado de productos:    <a href="{{ path('form_product' )}}">New product</a>
+        <ul>
+            {% for producto in product %}
+                <li>{{ producto.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

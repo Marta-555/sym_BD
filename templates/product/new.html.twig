@@ -1,0 +1,17 @@
+{# templates/product/new.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FormController!{% endblock %}
+
+{% block body %}
+    <h1> {{ titulo }} </h1>
+    <div>
+        {{ form(form) }}
+    </div>
+
+    {% for message in app.flashes('exito') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endblock %}
